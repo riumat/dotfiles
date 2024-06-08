@@ -1,0 +1,16 @@
+[colors.primary]
+background = "#0c0e10"
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "CaskaydiaCove NF"
+style = "Light"
+
+[window]
+opacity = 0.92
+
+[window.padding]
+x = 6
+y = 6

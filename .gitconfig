@@ -1,0 +1,25 @@
+
+[init]
+    defaultBranch = main
+[user]
+    name = riumat
+    email = matteoariu42@gmail.com
+[filter "gitignore"]
+    clean = "sed '/^#gitignore$/{N;d}'; sed '/#gitignore$/d';"
+    smudge = cat
+[merge]
+    tool = nvimdiff
+[mergetool]
+    prompt = false
+    keepBackup = false
+[mergetool "nvimdiff"]
+    layout = "LOCAL,BASE,REMOTE / MERGED"
+[core]
+    editor = nvim
+    pager = bat -p
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

@@ -1,0 +1,144 @@
+/*Dracula theme based on the Purple official rofi theme*/
+
+configuration {
+  show-icons: true;
+  display-drun: "";
+  disable-history: false;
+}
+
+* {
+  font: "Caskaydia Cove NF 10";
+
+  clr-window: #131521cc;
+  clr-bg: #13152100;
+  clr-fg: #f8f8f2;
+  clr-urgent-bg: #943d3d;
+  clr-urgent-fg: #282a36;
+  clr-active-bg: #ae7ff788;
+  clr-active-fg: #f8f8f2;
+  clr-br: #ae7ff7;
+
+  px: 0.0625em;
+  sm: 0.125em;
+  md: 0.25em;
+  lg: 0.5em;
+
+  sz-icon: 0.75em;
+
+  pd: 0.125em 0.5em;
+  pd-lg: 0.25em 0.5em;
+  mr: 0 1ch 0 0;
+
+  background-color: @clr-bg;
+  text-color: @clr-fg;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+window {
+  background-color: @clr-window;
+  border-color: @clr-br;
+  border: @sm;
+  border-radius: 0;
+  padding: 0;
+}
+
+message {
+  background-color: @clr-urgent-bg;
+  text-color: @clr-urgent-fg;
+  padding: @md;
+}
+
+textbox {
+  text-color: @clr-fg;
+}
+
+listview {
+  border-color: @clr-br;
+  spacing: @sm;
+  fixed-height: 0;
+  border: 0;
+  scrollbar: false;
+}
+
+element {
+  border: 0;
+  padding: @pd;
+}
+
+element-icon {
+  padding: 0 0 0 0.25em;
+  margin: @mr;
+  size: @sz-icon;
+}
+
+element.normal.normal {
+  background-color: @clr-bg;
+  text-color: @clr-fg;
+}
+
+element.normal.urgent {
+  background-color: @clr-urgent-bg;
+  text-color: @clr-urgent-fg;
+}
+
+element.normal.active {
+  background-color: @clr-active-bg;
+  text-color: @clr-fg;
+}
+
+element.selected.normal {
+  background-color: @clr-active-bg;
+  text-color: @clr-active-fg;
+}
+
+element.selected.urgent {
+  background-color: @clr-urgent-bg;
+  text-color: @clr-urgent-fg;
+}
+
+element.selected.active {
+  background-color: @clr-active-bg;
+  text-color: @clr-active-fg;
+}
+
+element.alternate.normal {
+  background-color: @clr-bg;
+  text-color: @clr-fg;
+}
+
+element.alternate.urgent {
+  background-color: @clr-urgent-bg;
+  text-color: @clr-urgent-fg;
+}
+
+element.alternate.active {
+  background-color: @clr-active-bg;
+  text-color: @clr-active-fg;
+}
+
+button.selected {
+  background-color: @clr-bg;
+  text-color: @clr-fg;
+}
+
+inputbar {
+  text-color: @clr-fg;
+  padding: @pd-lg;
+}
+
+inputbar {
+  children:
+    [ prompt,
+    textbox-prompt-colon,
+    entry,
+    case-indicator];
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: "->";
+  margin: @mr;
+  text-color: @clr-fg;
+}
