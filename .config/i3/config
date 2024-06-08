@@ -28,7 +28,7 @@ mouse_warping none
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -123,7 +123,6 @@ bindsym $mod+Shift+8 move container to workspace number 8, workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9, workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 0, workspace number 0
 
-bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 mode "resize" {
@@ -145,9 +144,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ## Screenshots
-set $screenshot exec --no-startup-id maim | tee "/home/$USER/Pictures/$(date)" | xclip -selection clipboard -t image/png
+set $screenshot exec --no-startup-id maim | tee "/home/$USER/images/$(date)" | xclip -selection clipboard -t image/png
 
-set $snippet exec --no-startup-id maim --select | tee "/home/$USER/Pictures/$(date)" | xclip -selection clipboard -t image/png
+set $snippet exec --no-startup-id maim --select | tee "/home/$USER/images/$(date)" | xclip -selection clipboard -t image/png
 
 bindsym Print $screenshot
 bindsym Shift+Print $snippet
@@ -155,7 +154,7 @@ bindsym Shift+Print $snippet
 bindsym $mod+P $screenshot
 bindsym $mod+Shift+P $snippet
 
-default_border pixel 2
+default_border pixel 1
 default_floating_border pixel 2
 gaps inner 8
 
@@ -177,6 +176,7 @@ client.placeholder      $clr_placeholder $clr_placeholder $clr_text $clr_placeho
 exec --no-startup-id picom -b
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id ~/.fehbg
-exec_always --no-startup-id ~/.asdf/shims/autotiling
+exec_always --no-startup-id autotiling
 
-exec --no-startup-id i3-msg workspace 0 && i3-msg workspace 1
+exec --no-startup-id i3-msg workspace 0
+exec --no-startup-id i3-msg workspace 1
