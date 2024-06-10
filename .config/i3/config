@@ -154,9 +154,9 @@ bindsym Shift+Print $snippet
 bindsym $mod+P $screenshot
 bindsym $mod+Shift+P $snippet
 
-default_border pixel 1
+default_border pixel 2
 default_floating_border pixel 2
-gaps inner 8
+gaps inner 4
 
 # colors
 set $clr_text         #ffffff
