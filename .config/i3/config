@@ -154,13 +154,16 @@ bindsym Shift+Print $snippet
 bindsym $mod+P $screenshot
 bindsym $mod+Shift+P $snippet
 
-default_border pixel 2
-default_floating_border pixel 2
-gaps inner 4
+default_border pixel 1
+default_floating_border pixel 1
+gaps inner 0
+
+
 
 # colors
+#bd93f9
 set $clr_text         #ffffff
-set $clr_focused      #bd93f9
+set $clr_focused      #87ffdf
 set $clr_inactive     #202020
 set $clr_unfocused    #202020
 set $clr_urgent       #ff3366
