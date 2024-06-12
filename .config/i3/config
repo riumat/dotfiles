@@ -154,6 +154,9 @@ bindsym Shift+Print $snippet
 bindsym $mod+P $screenshot
 bindsym $mod+Shift+P $snippet
 
+#i3lock
+bindsym $mod+Shift+O exec i3lock -c 000000
+
 default_border pixel 1
 default_floating_border pixel 1
 gaps inner 0

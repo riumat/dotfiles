@@ -17,15 +17,13 @@ tee .xprofile <<'EOF' 1>/dev/null
 #!/bin/bash
 
 # X configuration
-xrandr --dpi 192 \
-	--output HDMI-0 -s 1920x1080 --scale 2x2 --rate 60.00 --primary \
-	--output DP-2 -s 3840x2160 --rate 60.00 --left-of HDMI-0
+xrandr --dpi 120
 
 xset m 0                                           # mouse accel
 xset b 0                                           # bell
 xset s 0                                           # sleep timer
 xset -dpms                                         # disable display power saving
-setxkbmap 'us,us(intl)' -option 'grp:ctrls_toggle' # keyboard
+setxkbmap 'it,us' -option 'grp:ctrls_toggle'			 # keyboard
 
 # Env variables
 export GTK_THEME=Adwaita:dark
@@ -33,7 +31,7 @@ export QT_STYLE_OVERRIDE=adwaita-dark
 EOF
 
 tee .Xresources <<'EOF' 1>/dev/null
-Xft.dpi: 192
+Xft.dpi: 120
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull

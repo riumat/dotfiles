@@ -17,7 +17,9 @@ tee .xprofile <<'EOF' 1>/dev/null
 #!/bin/bash
 
 # X configuration
-xrandr --dpi 112
+xrandr --dpi 110 \
+	--output DP-0 -s 1920x1080  --rate 60.00 --primary \
+	--output VGA-0 -s 1920x1080 --rate 60.00 --left-of DP-0
 
 xset m 0                                           # mouse accel
 xset b 0                                           # bell
@@ -31,7 +33,7 @@ export QT_STYLE_OVERRIDE=adwaita-dark
 EOF
 
 tee .Xresources <<'EOF' 1>/dev/null
-Xft.dpi: 112
+Xft.dpi: 110
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull

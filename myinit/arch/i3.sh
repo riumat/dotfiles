@@ -13,6 +13,7 @@ LOGNAME=$(logname)
 
 cd /home/$LOGNAME
 
+
 # Update and install tools
 pacman -S --noconfirm \
 	rofi \
@@ -22,10 +23,12 @@ pacman -S --noconfirm \
 	polybar \
 	maim \
 	xclip \
-	# light \
+	light \
 	playerctl \
 	thunar \
 	feh
+
+usermod -aG video $LOGNAME
 
 # sudo -u $LOGNAME -- bash <<'EOF'
 # cd 
