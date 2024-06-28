@@ -53,7 +53,8 @@ pacman -S --noconfirm \
 	python-pip \
 	python-pipx \
 	ttf-cascadia-code-nerd \
-	ttf-iosevka-nerd
+	ttf-iosevka-nerd \
+	otf-geist-mono-nerd
 
 # sudo -u $LOGNAME -- bash <<'EOF'
 # cd 

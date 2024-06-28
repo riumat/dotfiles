@@ -5,7 +5,7 @@ background = "#0c0e10"
 size = 10.0
 
 [font.normal]
-family = "CaskaydiaCove NF"
+family = "GeistMono NF"
 style = "Light"
 
 [window]
