@@ -7,7 +7,7 @@ configuration {
 }
 
 * {
-  font: "Caskaydia Cove NF 10";
+  font: "GeistMono NF 10";
 
   clr-window: #131521cc;
   clr-bg: #13152100;
