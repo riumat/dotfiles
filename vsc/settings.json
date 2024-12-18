@@ -1,0 +1,113 @@
+{
+  "editor.fontFamily": "\"GeistMono NF\", sans serif",
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "window.density.editorTabHeight": "compact",
+  "window.menuBarVisibility": "toggle",
+  "rsp-ui.enableStartServerOnActivation": [
+      {
+          "id": "redhat.vscode-community-server-connector",
+          "name": "Community Server Connector",
+          "startOnActivation": true
+      }
+  ],
+  "workbench.colorCustomizations":{
+      "[Vim Dark Hard]":{
+          "sideBar.foreground": "#e0e0e0",
+          "sideBar.background": "#111111",
+          "sideBarSectionHeader.background": "#0e0e0e",
+          "editor.background": "#131313",
+          "editor.foreground": "#ffdeb4",
+          "breadcrumb.background": "#0b1014",
+          "statusBar.background": "#0b1014",
+          "statusBar.foreground": "#cacaca",
+          "minimap.background": "#131313",
+          "titleBar.activeBackground": "#131313",
+          "editorGroupHeader.tabsBackground": "#000000",
+          "activityBar.background": "#0b1014",
+          "tab.inactiveBackground": "#000000",
+          "tab.activeBackground": "#272727",
+          "tab.activeBorder": "#ffd866",
+      }
+  },
+
+  "editor.tokenColorCustomizations": {
+      "[Vim Dark Hard]": {
+          "textMateRules": [
+              {
+                  "scope":[
+                      "entity.name.function"
+                  ],
+                  "settings": {
+                      "foreground": "#ffd99f",
+                      "fontStyle": "bold"
+                  }
+              },
+              {
+                  "scope":[
+                      "string"
+                  ],
+                  "settings": {
+                      "foreground": "#e2ad82",
+                  }
+              },
+              {
+                  "scope": [                       
+                      "variable",
+                      "variable.other",
+                      "variable.parameter",
+                      "variable.name"
+                  ],
+                  "settings": {
+                      "foreground": "#fffaea"
+                  }
+              },
+              {
+                  "scope":[
+                      "storage.type.function"
+                  ],
+                  "settings": {
+                      "foreground": "#e4c290",
+                      
+                  }
+              },
+              {
+                  "scope":[
+                      "storage",
+                      "keyword.control",
+                      "entity.name.tag",
+                      "entity.name.type",
+                      "entity.other.attribute-name"
+                  ],
+                  "settings": {
+                      "foreground": "#e9ddb6",
+                      
+                  }
+              },
+              
+          ],
+      }
+  },
+  "workbench.activityBar.location": "bottom",
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "redhat.telemetry.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+  "editor.fontSize": 13,
+  "workbench.colorTheme": "Vercel Theme",
+  "terminal.integrated.fontSize": 13,
+  "terminal.external.linuxExec": "alacritty",
+  "git.suggestSmartCommit": false,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "quarkus.tools.alwaysShowWelcomePage": false,
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "workbench.sideBar.location": "right",
+  "codeium.enableConfig": {
+      "*": true,
+      "xml": true
+  },
+  "codeium.enableCodeLens": false,
+  "cody.autocomplete.enabled": true
+}
