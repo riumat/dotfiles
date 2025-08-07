@@ -2,6 +2,6 @@ source /usr/share/git/completion/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWCOLORHINTS=1
 
-export CLR_CYAN='\[\033[00;33m\]'
-export CLR_CLR='\[\033[00m\]'
-export PS1="[${CLR_CYAN}\u \W${CLR_CLR}] \$(__git_ps1 '(%s) ')${CLR_CYAN}\\$ ${CLR_CLR}"
+export CLR_MAGENTA='\[\033[01;35m\]'
+export CLR_DEFAULT='\[\033[00m\]'
+export PS1="[${CLR_MAGENTA}\u \W${CLR_DEFAULT}] \$(__git_ps1 '(%s) ')${CLR_MAGENTA}\\$ ${CLR_DEFAULT}"
