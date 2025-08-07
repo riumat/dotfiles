@@ -87,9 +87,9 @@
     "editor.scrollbar.horizontal": "visible",
 
     "vscode_custom_css.imports": [
-        "file:///opt/visual-studio-code/custom.css"
+        "file:///.config/VSCodium/css/custom.css"
     ],
-    
+     "vscode_custom_css.policy": true,
     "css.completion.triggerPropertyValueCompletion": false,
     "github.copilot.chat.terminalChatLocation": "terminal",
     "workbench.editor.editorActionsLocation": "hidden",

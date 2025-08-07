@@ -21,6 +21,6 @@ unset rc
 
 source /usr/share/git/completion/git-completion.bash
 
-# setxkbmap -layout it
+setxkbmap -layout it
 
 export EDITOR="/usr/bin/nvim"
