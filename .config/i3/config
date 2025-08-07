@@ -161,6 +161,7 @@ default_border pixel 1
 default_floating_border pixel 1
 gaps inner 0
 
+smart_borders on
 
 
 # colors

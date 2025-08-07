@@ -14,16 +14,16 @@ configuration {
   clr-fg: #f8f8f2;
   clr-urgent-bg: #943d3d;
   clr-urgent-fg: #282a36;
-  clr-active-bg: #ae7ff788;
+  clr-active-bg:rgba(99, 232, 255, 0.21);
   clr-active-fg: #f8f8f2;
-  clr-br: #ae7ff7;
+  clr-br:rgba(76, 243, 255, 0.58);
 
   px: 0.0625em;
   sm: 0.125em;
   md: 0.25em;
   lg: 0.5em;
 
-  sz-icon: 0.75em;
+  sz-icon: 0.85em;
 
   pd: 0.125em 0.5em;
   pd-lg: 0.25em 0.5em;
@@ -37,11 +37,12 @@ configuration {
 }
 
 window {
-  background-color: @clr-window;
-  border-color: @clr-br;
-  border: @sm;
-  border-radius: 0;
+  
   padding: 0;
+}
+
+mainbox {
+  children: [listview, message, inputbar];
 }
 
 message {
@@ -55,11 +56,14 @@ textbox {
 }
 
 listview {
+  background-color: @clr-window;
   border-color: @clr-br;
+  border: @sm;
+  border-radius: 0.5em;
   spacing: @sm;
   fixed-height: 0;
-  border: 0;
   scrollbar: false;
+  margin: 0 0 1em 0;
 }
 
 element {
@@ -124,6 +128,10 @@ button.selected {
 }
 
 inputbar {
+  background-color: @clr-window;
+  border-color: @clr-br;
+  border: @sm;
+  border-radius: 0.5em;
   text-color: @clr-fg;
   padding: @pd-lg;
 }

@@ -1,0 +1,42 @@
+/*tabs*/
+.monaco-workbench .part.editor > .content .editor-group-container .tab {
+    overflow: hidden; 
+    font-family: 'GeistMono NF', monospace !important; 
+}
+.monaco-workbench .part.editor > .content .editor-group-container .tab:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+    transition: background-color 0.3s ease;
+}
+.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab .tab-label a {
+    font-size: 11px !important; 
+}
+
+/*sidebar*/
+.monaco-workbench .part.sidebar .explorer-viewlet .monaco-list  {
+    font-family: 'GeistMono NF', monospace !important; 
+    font-size: 11px !important; 
+}
+
+.monaco-breadcrumbs .monaco-breadcrumbs .monaco-breadcrumb-item {
+    font-family: 'GeistMono NF', monospace !important; 
+    font-size: 11px !important; 
+}
+
+.monaco-workbench .codicon[class*=codicon-] {
+    font-size: 13px !important; 
+}
+.monaco-icon-label{
+    font-family: 'GeistMono NF', monospace !important; 
+    font-size: 11px !important; 
+}
+
+
+/*statusbar*/
+.monaco-workbench .part.statusbar {
+    font-family: 'GeistMono NF', monospace !important; 
+    font-size: 11px !important; 
+}
+
+.monaco-workbench.linux {
+    font-family: 'GeistMono NF', monospace !important; 
+}
