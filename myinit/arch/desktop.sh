@@ -5,9 +5,7 @@ if [ "$(id -u)" -ne 0 ]; then
 	exit 1
 fi
 
-# Prerequisites
 DIR=$(dirname $0 | xargs realpath)
-# $DIR/setup.sh
 
 LOGNAME=$(logname)
 
@@ -18,14 +16,14 @@ tee .xprofile <<'EOF' 1>/dev/null
 
 # X configuration
 xrandr --dpi 110 \
-	--output DP-0 -s 1920x1080  --rate 60.00 --primary \
-	--output VGA-0 -s 1920x1080 --rate 60.00 --left-of DP-0
+	--output HDMI-0 --mode 1920x1080 --pos 1920x0 --rate 60.00 --rotate normal \
+	--output DP-0 --primary --mode 1920x1080 --rate 60.00 pos 0x0 --rotate normal
 
 xset m 0                                           # mouse accel
 xset b 0                                           # bell
 xset s 0                                           # sleep timer
 xset -dpms                                         # disable display power saving
-setxkbmap 'us,us(intl)' -option 'grp:ctrls_toggle' # keyboard
+
 
 # Env variables
 export GTK_THEME=Adwaita:dark

@@ -85,7 +85,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # assign workspace to monitor
-set $dp DP-2
+set $dp DP-0
 set $hdmi HDMI-0
 
 workspace 1 output $dp $hdmi
