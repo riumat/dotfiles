@@ -87,7 +87,7 @@
     "editor.scrollbar.horizontal": "visible",
 
     "vscode_custom_css.imports": [
-        "file:///.config/VSCodium/css/custom.css"
+        "file://.config/VSCodium/css/custom.css"
     ],
      "vscode_custom_css.policy": true,
     "css.completion.triggerPropertyValueCompletion": false,
