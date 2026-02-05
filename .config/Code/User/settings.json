@@ -1,0 +1,68 @@
+{
+    "editor.fontFamily": "\"GeistMono NF\", sans serif",
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "workbench.iconTheme": "catppuccin-mocha",
+    "window.density.editorTabHeight": "compact",
+    "rsp-ui.enableStartServerOnActivation": [
+        {
+            "id": "redhat.vscode-community-server-connector",
+            "name": "Community Server Connector",
+            "startOnActivation": true
+        }
+    ],
+   
+    "editor.tokenColorCustomizations": {
+        
+    },
+    "workbench.activityBar.location": "bottom",
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "prisma.showPrismaDataPlatformNotification": false,
+    "redhat.telemetry.enabled": false,
+    "git.openRepositoryInParentFolders": "never",
+    "editor.fontSize": 14,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "terminal.integrated.fontSize": 13,
+    "terminal.external.linuxExec": "alacritty",
+    "git.suggestSmartCommit": false,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "quarkus.tools.alwaysShowWelcomePage": false,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "workbench.sideBar.location": "right",
+    "codeium.enableConfig": {
+        "*": true,
+        "xml": true
+    },
+    "codeium.enableCodeLens": false,
+    "cody.autocomplete.enabled": true,
+    "database-client.autoSync": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "window.menuBarVisibility": "toggle",
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "window.customTitleBarVisibility": "never",
+    "window.titleBarStyle": "native",
+    "window.menuStyle": "native",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "extensions.ignoreRecommendations": true,
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "react-native-tools.showUserTips": false,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.tabSize": 2,
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+  }
