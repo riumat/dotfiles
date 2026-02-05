@@ -7,7 +7,6 @@ fi
 
 # Prerequisites
 DIR=$(dirname $0 | xargs realpath)
-# $DIR/setup.sh
 
 LOGNAME=$(logname)
 
@@ -23,19 +22,14 @@ pacman -S --noconfirm \
 	polybar \
 	maim \
 	xclip \
-	light \
 	playerctl \
 	thunar \
-	feh
+	feh \
+	tmux
 
 usermod -aG video $LOGNAME
 
-# sudo -u $LOGNAME -- bash <<'EOF'
-# cd 
-# source .asdf/asdf.sh
 pipx install autotiling
-# EOF
-# 
 
 mkdir -p /etc/X11/xorg.conf.d && tee /etc/X11/xorg.conf.d/15-touchpad.conf <<'EOF' 1>/dev/null
 Section "InputClass"

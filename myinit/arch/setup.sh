@@ -10,7 +10,7 @@ LOGNAME=$(logname)
 
 cd /home/$LOGNAME
 
-pacman -Syu
+pacman -Syu --noconfirm
 
 # # aur
 # pacman -S --needed --noconfirm git base-devel
@@ -22,7 +22,7 @@ pacman -Syu
 # yay -Y --devel --save
 # yay -Syu
 
-# virualization
+# virtualization
 pacman -S --noconfirm dnsmasq qemu-full libvirt virt-manager
 
 systemctl enable libvirtd
@@ -36,6 +36,7 @@ pacman -R --noconfirm xterm
 pacman -S --noconfirm \
 	neovim \
 	alacritty \
+	i3-wm \
 	ripgrep \
 	zstd \
 	jq \
@@ -56,37 +57,22 @@ pacman -S --noconfirm \
 	ttf-iosevka-nerd \
 	otf-geist-mono-nerd
 
-# sudo -u $LOGNAME -- bash <<'EOF'
-# cd 
-# if ! [ -f .asdf/bin/asdf ]; then
-# 	git clone https://github.com/asdf-vm/asdf.git .asdf
-# fi
-# 
-# source .asdf/asdf.sh
-# 
-# for P in $(cat .tool-versions | awk '{print $1}'); do
-# 	asdf plugin-add $P
-# done
-# 
-# asdf install
-# 
-# for P in $(cat .tool-versions | awk '{print $1}'); do
-# 	asdf reshim $P
-# done
-# EOF
 
 # audio
+ppacman -S --noconfirm \
+    pipewire \
+    wireplumber \
+    pipewire-pulse \
+    pipewire-alsa \
+    pipewire-jack \
+    pavucontrol
 
-pacman -S --noconfirm \
-	pipewire \
-	wireplumber \
-	pipewire-pulse \
-	pavucontrol
 
 mkdir -p /etc/X11/xinit/xinitrc.d && tee /etc/X11/xinit/xinitrc.d/60-audio.sh <<'EOF' 1>/dev/null
 #!/bin/sh
-
 /usr/bin/pipewire &
-/usr/bin/pipewire-pulse &
 /usr/bin/wireplumber &
+/usr/bin/pipewire-pulse &
 EOF
+
+chmod +x /etc/X11/xinit/xinitrc.d/60-audio.sh
