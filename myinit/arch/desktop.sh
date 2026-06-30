@@ -27,6 +27,8 @@ xset -dpms                                         # disable display power savin
 # Env variables
 export GTK_THEME=Adwaita:dark
 export QT_STYLE_OVERRIDE=adwaita-dark
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 EOF
 
 tee .Xresources <<'EOF' 1>/dev/null

@@ -1,68 +1,135 @@
 {
     "editor.fontFamily": "\"GeistMono NF\", sans serif",
     "editor.unicodeHighlight.nonBasicASCII": false,
-    "workbench.iconTheme": "catppuccin-mocha",
     "window.density.editorTabHeight": "compact",
-    "rsp-ui.enableStartServerOnActivation": [
-        {
-            "id": "redhat.vscode-community-server-connector",
-            "name": "Community Server Connector",
-            "startOnActivation": true
-        }
+    "workbench.colorCustomizations": {
+    "editorBracketMatch.background": "#00000000", 
+    "editorBracketMatch.border": "#ffffff1a",
+    "editorIndentGuide.background1": "#cccccc0f", 
+    "editorIndentGuide.activeBackground1": "#ffffff17",
+    "editor.background": "#16171a",
+    "sideBar.background": "#16171a",
+    "activityBar.background": "#16171a",
+    "actionBar.toggledBackground": "#16171a",
+    "activityBarTop.background": "#16171a",
+    "statusBar.background": "#16171a",
+    "titleBar.activeBackground": "#16171a",
+    "titleBar.inactiveBackground": "#16171a",
+    "panel.background": "#16171a",
+    "editorGroupHeader.tabsBackground": "#16171a",
+    "editorGroupHeader.tabsBorder": "#16171a",
+    "editorGroup.border": "#16171a",
+    "editorGroup.dropBackground": "#16171a",
+    "editorGroupHeader.noTabsBackground": "#16171a",
+    "editorGroupHeader.border": "#16171a",
+    "editorGroup.focusedEmptyBorder": "#16171a",
+    "editorGroup.emptyBackground": "#16171a",
+    "editorGroupHeader.tabsEmptyBackground": "#16171a",
+    "tab.activeBackground": "#252537",
+    "tab.activeForeground": "#c7f8ff",
+    "tab.hoverForeground": "#c7f8ff",
+    "tab.inactiveBackground": "#16171a",
+    "tab.inactiveForeground": "#555875",
+    "tab.border": "#16171a",
+    "tab.activeBorder": "#16171a",
+    "tab.unfocusedActiveBorder": "#16171a",
+    "tab.activeBorderTop": "#16171a",
+    "tab.unfocusedActiveBorderTop": "#16171a",
+    "tab.hoverBackground": "#16171a",
+    "tab.unfocusedHoverBackground": "#16171a",
+    "tab.hoverBorder": "#16171a",
+    "tab.unfocusedHoverBorder": "#16171a",
+    "tab.activeModifiedBorder": "#16171a",
+    "tab.inactiveModifiedBorder": "#16171a",
+    "tab.unfocusedActiveModifiedBorder": "#16171a",
+    "tab.unfocusedInactiveModifiedBorder": "#16171a",
+    "dropdown.background": "#16171a",
+    "input.background": "#2e3045",
+    "input.border": "#3e425e",
+    "inputOption.activeBackground": "#16171a",
+    "inputOption.activeBorder": "#16171a",
+    "inputOption.activeForeground": "#e5e9ff",
+    "button.background": "#071b8b",
+    "button.foreground": "#ffffff",
+    "terminal.background": "#16171a",
+    "editorLineNumber.activeForeground": "#fdad51",
+    "menu.background": "#16171a",
+    "editorPane.background": "#16171a",
+    "editor.selectionBackground": "#383c52",
+    "panel.border": "#383c52",
+    "sideBar.border": "#383c52",
+    "scrollbar.shadow": "#16171a",
+    "editorStickyScroll.border": "#2d3042",
+    "editor.lineHighlightBackground": "#2d304224",
+    "editorGutter.background": "#16171a",
+    "editorGutter.modifiedBackground": "#16171a",
+    "editorGutter.addedBackground": "#16171a",
+    "editorGutter.deletedBackground": "#16171a",
+    "statusBarItem.remoteBackground": "#9190ff",
+    "focusBorder": "#16171a",
+    "scrollbarSlider.background": "#383c52",
+    "scrollbarSlider.activeBackground": "#535a7c",
+    "scrollbarSlider.hoverBackground": "#474c69"
+},
+
+    "editor.scrollbar.verticalScrollbarSize": 10,
+    "editor.scrollbar.horizontalScrollbarSize": 10,
+    "editor.scrollbar.vertical": "visible",
+    "editor.scrollbar.horizontal": "visible",
+
+    "vscode_custom_css.imports": [
+        "file:///opt/visual-studio-code/custom.css",
     ],
-   
-    "editor.tokenColorCustomizations": {
-        
+    
+    "css.completion.triggerPropertyValueCompletion": false,
+    "github.copilot.chat.terminalChatLocation": "terminal",
+    "workbench.editor.editorActionsLocation": "hidden",
+    "editor.minimap.enabled": false,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    
     "workbench.activityBar.location": "bottom",
-    "liveServer.settings.donotVerifyTags": true,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "prisma.showPrismaDataPlatformNotification": false,
-    "redhat.telemetry.enabled": false,
     "git.openRepositoryInParentFolders": "never",
-    "editor.fontSize": 14,
-    "workbench.colorTheme": "Catppuccin Mocha",
+    "editor.fontSize": 13,
     "terminal.integrated.fontSize": 13,
     "terminal.external.linuxExec": "alacritty",
     "git.suggestSmartCommit": false,
-    "typescript.preferences.importModuleSpecifier": "non-relative",
-    "quarkus.tools.alwaysShowWelcomePage": false,
+    "js/ts.preferences.importModuleSpecifier": "non-relative",
     "editor.inlineSuggest.suppressSuggestions": true,
     "workbench.sideBar.location": "right",
-    "codeium.enableConfig": {
-        "*": true,
-        "xml": true
-    },
-    "codeium.enableCodeLens": false,
-    "cody.autocomplete.enabled": true,
-    "database-client.autoSync": true,
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "window.menuBarVisibility": "toggle",
-    "window.commandCenter": false,
-    "workbench.layoutControl.enabled": false,
-    "window.customTitleBarVisibility": "never",
-    "window.titleBarStyle": "native",
-    "window.menuStyle": "native",
+   
+    "terminal.integrated.enableMultiLinePasteWarning": "auto",
     "github.copilot.enable": {
         "*": false,
         "plaintext": false,
         "markdown": false,
-        "scminput": false
+        "scminput": false,
+        "sql": false
     },
-    "extensions.ignoreRecommendations": true,
-    "C_Cpp.default.compilerPath": "/usr/bin/g++",
-    "react-native-tools.showUserTips": false,
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "native",
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.tips.enabled": false,
+    "workbench.tree.expandMode": "doubleClick",
+    "chat.editor.fontFamily": "\"GeistMono NF\", sans serif",
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.tabSize": 2,
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
-  }
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "eslint.debug": true,
+    "eslint.codeActionsOnSave.rules": null,
+    "eslint.enable": false,
+    "window.customTitleBarVisibility": "never",
+    "docker.extension.enableComposeLanguageServer": false,
+    "chat.viewSessions.orientation": "stacked"
+}
