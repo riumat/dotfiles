@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $(dirname $(realpath @0))
+cd $(dirname $(realpath $0))
 
 STOW_ARGS=$@
 

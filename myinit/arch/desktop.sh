@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [ "$(id -u)" -ne 0 ]; then
-	echo "Please run as root." >&2
-	exit 1
+        echo "Please run as root." >&2
+        exit 1
 fi
 
 DIR=$(dirname $0 | xargs realpath)
@@ -14,8 +14,9 @@ cd /home/$LOGNAME
 tee .xprofile <<'EOF' 1>/dev/null
 #!/bin/bash
 
-# X configuration
-xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 2560x0 --rotate normal --output DP-0 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off
+# per-machine X configuration
+HOST_XPROFILE="$HOME/.config/i3/$(cat /etc/hostname)/xprofile"
+[ -f "$HOST_XPROFILE" ] && . "$HOST_XPROFILE"
 
 
 xset m 0                                           # mouse accel
@@ -40,3 +41,9 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 EOF
+
+chown $LOGNAME:$LOGNAME .xprofile .Xresources
+
+# dev servers, home lan only
+ufw allow from 192.168.1.0/24 to any port 3000:3010 proto tcp comment 'dev server LAN'
+ufw allow from 192.168.1.0/24 to any port 5173:5180 proto tcp comment 'Vite LAN'

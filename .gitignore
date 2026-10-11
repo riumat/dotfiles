@@ -1,1 +1,8 @@
-
+.config/Code/*
+!.config/Code/User/
+.config/Code/User/*
+!.config/Code/User/settings.json
+!.config/Code/User/settings-temp.json
+!.config/Code/User/custom.css
+!.config/Code/User/keybindings.json
+!.config/Code/User/snippets/

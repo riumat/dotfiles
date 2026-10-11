@@ -1,8 +1,3 @@
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
-
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 	PATH="$HOME/.local/bin:$HOME/bin:$PATH"
@@ -21,6 +16,5 @@ unset rc
 
 source /usr/share/git/completion/git-completion.bash
 
-setxkbmap -layout it
 
 export EDITOR="/usr/bin/nvim"

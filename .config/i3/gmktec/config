@@ -1,0 +1,16 @@
+set $dp DisplayPort-2
+set $hdmi HDMI-A-0
+bindsym $mod+F1 exec --no-startup-id ~/.config/i3/gmktec/screen-dual.sh && ~/.config/polybar/launch.sh
+bindsym $mod+F2 exec --no-startup-id ~/.config/i3/gmktec/screen-hdmi.sh && ~/.config/polybar/launch.sh
+
+# assign workspace to monitor
+workspace 1 output $dp $hdmi
+workspace 2 output $dp $hdmi
+workspace 3 output $dp $hdmi
+workspace 4 output $dp $hdmi
+workspace 5 output $dp $hdmi
+workspace 6 output $hdmi
+workspace 7 output $hdmi
+workspace 8 output $hdmi
+workspace 9 output $hdmi
+workspace 0 output $hdmi

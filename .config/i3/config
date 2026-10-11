@@ -1,6 +1,5 @@
 include "~/.config/i3/$(hostname)/config"
 
-exec --no-startup-id ~/.xprofile
 
 set $mod Mod4
 
@@ -13,7 +12,7 @@ font pango:GeistMono NF 9
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
-exec --no-startup-id dex-autostart --autostart --environment i3
+exec --no-startup-id dex --autostart --environment i3
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -36,9 +35,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
+
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 # Media player controls
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -84,20 +84,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
-# assign workspace to monitor
-set $dp DP-0
-set $hdmi HDMI-0
 
-workspace 1 output $dp $hdmi
-workspace 2 output $dp $hdmi
-workspace 3 output $dp $hdmi
-workspace 4 output $dp $hdmi
-workspace 5 output $dp $hdmi
-workspace 6 output $hdmi
-workspace 7 output $hdmi
-workspace 8 output $hdmi
-workspace 9 output $hdmi
-workspace 0 output $hdmi
 
 # switch to workspace
 bindsym $mod+1 workspace number 1
@@ -144,9 +131,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ## Screenshots
-set $screenshot exec --no-startup-id maim | tee "/home/$USER/images/$(date)" | xclip -selection clipboard -t image/png
+set $screenshot exec --no-startup-id maim | tee "$HOME/Pictures/screenshots/$(date +%F_%H-%M-%S).png" | xclip -selection clipboard -t image/png
 
-set $snippet exec --no-startup-id maim --select | tee "/home/$USER/images/$(date)" | xclip -selection clipboard -t image/png
+set $snippet exec --no-startup-id maim --select | tee "$HOME/Pictures/screenshots/$(date +%F_%H-%M-%S).png" | xclip -selection clipboard -t image/png
 
 bindsym Print $screenshot
 bindsym Shift+Print $snippet
@@ -189,7 +176,9 @@ client.placeholder      $clr_placeholder $clr_placeholder $clr_text $clr_placeho
 exec --no-startup-id picom -b
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id ~/.fehbg
-exec_always --no-startup-id autotiling
+exec --no-startup-id autotiling
 
 exec --no-startup-id i3-msg workspace 0
 exec --no-startup-id i3-msg workspace 1
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'

@@ -1,4 +1,6 @@
 {
+    "chat.disableAIFeatures": true,
+    "telemetry.telemetryLevel": "off",
     "editor.fontFamily": "\"GeistMono NF\", sans serif",
     "editor.unicodeHighlight.nonBasicASCII": false,
     "window.density.editorTabHeight": "compact",

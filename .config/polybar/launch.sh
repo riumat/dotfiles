@@ -1,24 +1,15 @@
 #!/usr/bin/env bash
 
-# Terminate already running bar instances
-# If all your bars have ipc enabled, you can use 
-polybar-msg cmd quit
-# Otherwise you can use the nuclear option:
-# killall -q polybar
+# signal instead of ipc: bars restarting on screenchange-reload miss ipc messages
+pkill -u "$UID" -x polybar
+for _ in $(seq 10); do
+        pgrep -u "$UID" -x polybar >/dev/null || break
+        sleep 0.2
+done
+pkill -9 -u "$UID" -x polybar 2>/dev/null
 
-# Launch bar1 and bar2
-# echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
-# polybar bar1 2>&1 | tee -a /tmp/polybar1.log & disown
-# polybar bar2 2>&1 | tee -a /tmp/polybar2.log & disown
-
-# Launch bars in all monitors
-if type "xrandr"; then
-	for M in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-		echo "---" | tee -a /tmp/polybar-$M.log
-		MONITOR=$M polybar bar 2>&1 | tee -a /tmp/polybar-$M.log & disown
-	done
-else
-	echo "---" | tee -a /tmp/polybar.log
-	polybar bar 2>&1 | tee -a /tmp/polybar.log & disown
-fi
-
+# --list-monitors skips outputs turned off with xrandr --off
+for M in $(polybar --list-monitors | cut -d":" -f1); do
+        echo "---" >> "/tmp/polybar-$M.log"
+        MONITOR=$M polybar bar >> "/tmp/polybar-$M.log" 2>&1 & disown
+done
