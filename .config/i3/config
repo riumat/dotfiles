@@ -148,8 +148,11 @@ default_floating_border pixel 2
 
 smart_borders on
 
-#calendar floating window
+# calendar floating window
 for_window [class="calendar"] floating enable, border pixel 2, move position center
+
+# hardware monitor (polybar cpu click)
+for_window [class="hwmon"] floating enable, resize set 90 ppt 85 ppt, move position center
 
 # GTK file chooser (also via xdg-desktop-portal-gtk) reuses its last saved size,
 # which overflows a smaller monitor: size it relative to the current one
