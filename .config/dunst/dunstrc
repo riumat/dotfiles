@@ -1,0 +1,38 @@
+[global]
+origin = bottom-right
+# above the floating polybar: 10 (offset) + 33 (bar) + 10 (gap)
+offset = (10, 53)
+width = 340
+gap_size = 8
+padding = 10
+horizontal_padding = 14
+frame_width = 2
+corner_radius = 8
+font = GeistMono NF 10
+format = "<b>%s</b>\n%b"
+icon_position = off
+progress_bar_height = 8
+progress_bar_frame_width = 0
+progress_bar_corner_radius = 4
+background = "#161717"
+foreground = "#C5C8C6"
+highlight = "#87ffdf"
+
+[urgency_low]
+frame_color = "#2c2c2c"
+timeout = 4
+
+[urgency_normal]
+frame_color = "#87ffdf"
+timeout = 6
+
+[urgency_critical]
+frame_color = "#ff3366"
+timeout = 0
+
+# volume/brightness bars from osd.sh: short, out of history
+[osd]
+appname = osd
+format = "%s"
+timeout = 1.5
+history_ignore = yes
