@@ -1,4 +1,4 @@
-/*Dracula theme based on the Purple official rofi theme*/
+/* layout from the Purple official rofi theme, colors aligned with i3/polybar */
 
 configuration {
   show-icons: true;
@@ -9,14 +9,14 @@ configuration {
 * {
   font: "GeistMono NF 11";
 
-  clr-window: #131521cc;
-  clr-bg: #13152100;
-  clr-fg: #f8f8f2;
-  clr-urgent-bg: #943d3d;
-  clr-urgent-fg: #282a36;
-  clr-active-bg:rgba(99, 232, 255, 0.21);
-  clr-active-fg: #f8f8f2;
-  clr-br:rgba(76, 243, 255, 0.58);
+  clr-window: #161717e6;
+  clr-bg: #16171700;
+  clr-fg: #C5C8C6;
+  clr-urgent-bg: #A54242;
+  clr-urgent-fg: #161717;
+  clr-active-bg: #87ffdf2e;
+  clr-active-fg: #ffffff;
+  clr-br: #87ffdf;
 
   px: 0.0625em;
   sm: 0.125em;
@@ -59,7 +59,7 @@ listview {
   background-color: @clr-window;
   border-color: @clr-br;
   border: @sm;
-  border-radius: 0em;
+  border-radius: 0.5em;
   spacing: @sm;
   fixed-height: 0;
   scrollbar: false;
@@ -131,7 +131,7 @@ inputbar {
   background-color: @clr-window;
   border-color: @clr-br;
   border: @sm;
-  border-radius: 0em;
+  border-radius: 0.5em;
   text-color: @clr-fg;
   padding: @pd-lg;
 }

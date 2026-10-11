@@ -9,7 +9,7 @@ family = "GeistMono NF"
 style = "Light"
 
 [window]
-opacity = 0.94
+opacity = 0.88
 
 [window.padding]
 x = 6

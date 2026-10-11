@@ -144,13 +144,11 @@ bindsym $mod+Shift+P $snippet
 #i3lock
 bindsym $mod+Shift+O exec i3lock -c 000000
 
-default_border none
-default_floating_border none
-#gaps inner 10
-#gaps outer 5
+default_border pixel 2
+default_floating_border pixel 2
+# gaps are per host, see <hostname>/config
 
 smart_borders on
-#gaps bottom 45
 
 #calendar floating window
 for_window [class="calendar"] floating enable, border pixel 2, move position center
