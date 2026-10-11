@@ -18,3 +18,5 @@ workspace 0 output $hdmi
 # gaps
 gaps inner 10
 gaps outer 0
+# room for the floating polybar (height + offset-y)
+gaps bottom 43
