@@ -185,3 +185,7 @@ exec --no-startup-id i3-msg workspace 0
 exec --no-startup-id i3-msg workspace 1
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'
+
+# Secret Service (gnome-keyring)
+exec --no-startup-id dbus-update-activation-environment --all
+exec --no-startup-id gnome-keyring-daemon --start --components=secrets
