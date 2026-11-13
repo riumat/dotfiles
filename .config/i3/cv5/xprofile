@@ -1,0 +1,3 @@
+"$HOME/.config/i3/cv5/screen-dual.sh"
+
+export QT_QPA_PLATFORM=xcb

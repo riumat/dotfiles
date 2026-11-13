@@ -1,0 +1,23 @@
+set $dp DP-4
+set $hdmi DP-2
+bindsym $mod+F1 exec --no-startup-id ~/.config/i3/cv5/screen-dual.sh && ~/.config/polybar/launch.sh
+bindsym $mod+F2 exec --no-startup-id ~/.config/i3/cv5/screen-small.sh && ~/.config/polybar/launch.sh
+bindsym $mod+F3 exec --no-startup-id ~/.config/i3/cv5/screen-big.sh && ~/.config/polybar/launch.sh
+
+# assign workspace to monitor
+workspace 1 output $dp $hdmi
+workspace 2 output $dp $hdmi
+workspace 3 output $dp $hdmi
+workspace 4 output $dp $hdmi
+workspace 5 output $dp $hdmi
+workspace 6 output $hdmi $dp
+workspace 7 output $hdmi $dp
+workspace 8 output $hdmi $dp
+workspace 9 output $hdmi $dp
+workspace 0 output $hdmi $dp
+
+# gaps
+gaps inner 10
+gaps outer 0
+# room for the floating polybar (height + offset-y)
+gaps bottom 43
