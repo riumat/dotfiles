@@ -14,7 +14,12 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+# .bashrc.d/hosts/<hostname>.sh
+if [ -f ~/.bashrc.d/hosts/"$HOSTNAME".sh ]; then
+	. ~/.bashrc.d/hosts/"$HOSTNAME".sh
+fi
+
 source /usr/share/git/completion/git-completion.bash
 
 
-export EDITOR="/usr/bin/nvim"
+export EDITOR="code --wait"
